@@ -114,7 +114,7 @@ class AuthController extends Controller
             $user->assignRole($code->role->name);
         }
 
-        if ($request->series_id) {
+        if ($request->series_id == $user->profile->series_id) {
             $user->profile->series_id = $request->series_id;
             $user->profile->save();
         }

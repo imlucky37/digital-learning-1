@@ -11,7 +11,8 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Name</th>
+                                <th scope="col">School Name</th>
+                                <th scope="col">User Code</th>
                                 <th scope="col">Mobile</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Actions</th>

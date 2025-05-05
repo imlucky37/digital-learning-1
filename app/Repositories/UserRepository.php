@@ -16,7 +16,7 @@ class UserRepository extends BaseRepository implements UserRepositoryInterface
         $this->user = $user;
     }
 
-    public function paginated($columns, $role = null, $start,  $length, $sortColumn, $sortDirection, $searchValue, $countOnly = false)
+    public function paginated($columns, $role = null, $start, $length, $sortColumn, $sortDirection, $searchValue, $countOnly = false)
     {
         $query = $this->user->select('*');
 

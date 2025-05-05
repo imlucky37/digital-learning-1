@@ -74,7 +74,7 @@ class UserController extends Controller
     public function destroy(Request $request, User $user)
     {
         $userDeletion = $user->delete();
-        return $this->jsonResponse((bool)$userDeletion, 'User deleted successfully');
+        return $this->jsonResponse((bool) $userDeletion, 'User deleted successfully');
     }
 
     public function generateDataTableData($repository)
@@ -91,10 +91,10 @@ class UserController extends Controller
         $data = $repository->paginated($columns, $role, $start, $length, $sortColumn, $sortDirection, $searchValue);
 
         return $data = array(
-            "draw"            => intval(request()->input('draw')),
-            "recordsTotal"    => intval($count),
+            "draw" => intval(request()->input('draw')),
+            "recordsTotal" => intval($count),
             "recordsFiltered" => intval($count),
-            "data"            => $data
+            "data" => $data
         );
     }
 
